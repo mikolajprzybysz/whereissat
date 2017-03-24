@@ -3,20 +3,15 @@
     "license": "MIT",
     "type": "project",
     "description": "Api for getting the iss location",
-    "autoload": {
-        "psr-4": { "": "src/" }
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
     },
-    "autoload-dev": {
-        "psr-4": { "Tests\\": "tests/" }
-    },
-    "require": {},
     "require-dev": {
-        "codeception/codeception": "^2.2",
         "phpunit/phpunit": "^5"
     },
     "config": {
         "platform": {
-            "php": "5.5.9"
+            "php": "5.6"
         }
     }
 }

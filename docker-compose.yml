@@ -1,0 +1,14 @@
+# Docker Compose file for Shop
+# - uses - 'docker' environment
+version: '2'
+services:
+  whereissat:
+    container_name: whereissat
+    image: mikolajprzybysz/whereissat:$DOCKER_TAG
+    ports:
+      - 8888:80
+    environment:
+      - ENV=docker
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+    volumes:
+      - ./:/var/www/
