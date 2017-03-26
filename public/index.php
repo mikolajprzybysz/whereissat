@@ -4,8 +4,6 @@ ini_set('display_errors', 1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use GuzzleHttp;
-
 $client = new GuzzleHttp\Client();
 
 $locationRequest = new GuzzleHttp\Psr7\Request('GET', 'https://api.wheretheiss.at/v1/satellites/25544');
@@ -17,7 +15,7 @@ $location = json_decode($contents);
 $latitude = (float) $location->latitude;
 $longitude = (float) $location->longitude;
 
-$apikey = filter_var($_ENV['GOOGLE_MAPS_API_KEY'], FILTER_SANITIZE_STRING);
+$apikey = filter_var(getenv('GOOGLE_MAPS_API_KEY'), FILTER_SANITIZE_STRING);
 
 $url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude=&key=$apikey";
 $placeRequest = new GuzzleHttp\Psr7\Request('GET', $url);

@@ -18,4 +18,4 @@ now you can visit the site at:
     
 ## run on linux
 
-    echo 'GOOGLE_MAPS_API_KEY=YOUR_API_KEY' >> ~/.bashrc
+    echo 'SetEnv GOOGLE_MAPS_API_KEY YOUR_API_KEY' >> public/.htaccess
