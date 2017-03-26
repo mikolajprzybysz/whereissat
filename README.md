@@ -3,7 +3,7 @@ Shows the location of ISS
 
 ## Requirements
 
-* php 5.6
+* php 5.5.*
 
 ## Get google api key
 You can obtain you google api key here:
