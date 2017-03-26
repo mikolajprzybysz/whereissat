@@ -1,6 +1,10 @@
 # Whereissat
 Shows the location of ISS
 
+## Requirements
+
+* php 5.6
+
 ## Get google api key
 You can obtain you google api key here:
 
@@ -19,3 +23,7 @@ now you can visit the site at:
 ## run on linux
 
     echo 'SetEnv GOOGLE_MAPS_API_KEY YOUR_API_KEY' >> public/.htaccess
+
+## run unit tests
+
+    (cd tests && ../vendor/bin/phpunit)
