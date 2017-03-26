@@ -1,5 +1,5 @@
 # Whereissat
-Shows the location of ISS
+Shows the location name of ISS
 
 ## Requirements
 
